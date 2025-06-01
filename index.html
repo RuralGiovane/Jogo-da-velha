@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="tela-inicio" class="tela-inicio">
+    <h1>Jogo da Velha</h1>
+
+    <label>
+      Jogador 1 (X):
+      <input type="text" id="nome-jogador-1" autocomplete="off" />
+    </label>
+
+    <label>
+      Jogador 2 (O):
+      <input type="text" id="nome-jogador-2" autocomplete="off" />
+    </label>
+
+    <label class="checkbox-ia">
+      <input type="checkbox" id="checkbox-ia" />
+      Jogar contra IA
+    </label>
+
+    <div id="dificuldade-container" style="display:none;">
+      <label>
+        Dificuldade:
+        <select id="dificuldade-select">
+          <option value="facil">Fácil</option>
+          <option value="medio">Médio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+      </label>
+    </div>
+
+    <button id="botao-comecar" disabled>Começar</button>
+  </div>
+
+  <div id="tela-jogo" class="tela-jogo" style="display:none;">
+    <div id="mensagem" class="mensagem"></div>
+
+    <div id="tabuleiro" class="tabuleiro">
+      <div class="celula" id="celula-0" data-index="0"></div>
+      <div class="celula" id="celula-1" data-index="1"></div>
+      <div class="celula" id="celula-2" data-index="2"></div>
+      <div class="celula" id="celula-3" data-index="3"></div>
+      <div class="celula" id="celula-4" data-index="4"></div>
+      <div class="celula" id="celula-5" data-index="5"></div>
+      <div class="celula" id="celula-6" data-index="6"></div>
+      <div class="celula" id="celula-7" data-index="7"></div>
+      <div class="celula" id="celula-8" data-index="8"></div>
+    </div>
+
+    <div class="botoes-jogo">
+      <button id="botao-voltar">Voltar</button>
+      <button id="botao-jogar-novamente">Jogar Novamente</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
